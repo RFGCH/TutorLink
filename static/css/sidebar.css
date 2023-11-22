@@ -1,0 +1,59 @@
+.sidebar {
+	background-color: var(--accent);/* Celeste/turquesa semitransparente */
+	width: 250px;
+	position: fixed; /* Cambiado a fixed para que esté siempre visible */
+	top: 0;
+	left: -250px; /* Inicialmente oculta la barra lateral */
+	height: 100%;
+	border-radius: 0 20px 20px 0;
+	transition: left 0.3s; /* Agrega una transición suave para el despliegue */
+	z-index: 2; /* Asegura que la barra lateral esté por encima del contenido */
+}
+
+.menu-options {
+	padding: 31px 20px;
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+
+.sidebar-open {
+	left: 0;
+}
+
+.sidebar-toggle {
+	position: fixed;
+	top: 120px;
+	background: var(--accent);
+	border: none;
+	font-size: 20px;
+	padding: 4px 8px 7px;
+	color: white;
+	border-radius: 0 10px 10px 0;
+}
+
+.close-button {
+	position: absolute;
+	top: 30px;
+	right: 23px;
+	cursor: pointer;
+	font-size: 23px;
+}
+
+.close-button:hover {
+	color: #fff; /* Cambia el color del botón de cierre cuando se pasa el mouse sobre él */
+}
+.links {
+	display: flex;
+	flex-direction: column;
+	gap: 18px;
+}
+.link {
+	text-decoration: none;
+	color: white;
+	font-size: 20px;
+	font-weight: bold;
+}
+.link:hover {
+	text-decoration: underline;
+}
