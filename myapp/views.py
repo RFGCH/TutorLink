@@ -8,8 +8,17 @@ from myapp.models import Valoraciones
 from django.core.files.storage import FileSystemStorage
 
 def homepage_view(request):
-  preguntas=Pregunta.objects.all()
-  return render(request, 'main/Foro.html',{'preguntas': preguntas} )
+  html = f'''
+  <html>
+      <body>
+          <h1>Hello from Vercel!</h1>
+          <p>The current time is 1.</p>
+      </body>
+  </html>
+  '''
+  return HttpResponse(html)
+  #preguntas=Pregunta.objects.all()
+  #return render(request, 'main/Foro.html',{'preguntas': preguntas} )
 
 def respuestas_foro(request,pk):
   #respuestas=Pregunta.objects.filter(id=pk)
